@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="register.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+    <div class="registration-container">
+        <!-- Header -->
+        <h2>Create Your Account</h2>
+        <p>Join us today and start your journey!</p>
+        
+        <!-- Registration Form -->
+        <form id="registration-form">
+            <!-- Personal Information Section -->
+            <div class="personal-section">
+                <h3>Personal Information</h3>
+                <div class="first-form-group">
+                    <label for="first-name">Firstname:</label> 
+                    <input type="text" id="first-name" name="first_name" placeholder="First Name"> <!-- Input field with placeholder -->
+                    <span id="first-name-error" class="error-message"></span>
+                </div>
+                
+                <div class="first-form-group">
+                    <label for="last-name">Lastname:</label> <!-- Label outside the input field -->
+                    <input type="text" id="last-name" name="last_name" placeholder="Last Name"> <!-- Input field with placeholder -->
+                    <span id="last-name-error" class="error-message"></span>
+                </div>
+                
+                <div class="first-form-group">
+                    <label for="dob">Date of Birth:</label> <!-- Label outside the input field -->
+                    <input type="text" id="dob" name="dob" placeholder="Select your date of birth"> <!-- Input field with placeholder -->
+                    <span class="calendar-icon">&#x1F4C5;</span>
+                    <span id="dob-error" class="error-message"></span>
+                    <span class="calendar-icon">&#x1F4C5;</span>
+                </div>
+                <div class="first-form-group">
+                    <label>Gender:</label><br>
+                    <label><input type="radio" name="gender" value="male"> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                    <label><input type="radio" name="gender" value="other"> Other</label>
+                    <span id="gender-error" class="error-message"></span>
+                </div>
+            </div>
+            
+            <!-- Contact Information Section -->
+            <div class="contact-section">
+                <h3>Contact Information</h3>
+                <div class="first-form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="text" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                    <span id="phone-error" class="error-message"></span>
+                </div>
+                <div class="first-form-group">
+                    <label for="email" >email:</label>
+                    <input type="email" id="email" name="email" placeholder="Email Address">
+                    <span id="email-error" class="error-message"></span>
+                </div>
+            </div>
+
+            <!-- Address Section -->
+            <div class="address-section">
+                <h3>Address</h3>
+                <div class="first-form-group">
+                    <label for="address" >Address:</label>
+                    <textarea id="address" name="address" placeholder="Address"></textarea>
+                    <span id="address-error" class="error-message"></span>
+                </div>
+                <div class="first-form-group">
+                    <label for="state">State:</label>
+                    <select id="state" name="state">
+                        <option value="">Select State</option>
+                        <option value="DL">Delhi</option>
+                        <option value="MH">Maharashtra</option>
+                        <option value="KA">Karnataka</option>
+                        <option value="TN">Tamil Nadu</option>
+                        <option value="WB">West Bengal</option>
+                        <option value="UP">Uttar Pradesh</option>
+                        <option value="GJ">Gujarat</option>
+                    </select>
+                    <span id="state-error" class="error-message"></span>
+                </div>
+                <div class="first-form-group">
+                    <label for="city">City:</label>
+                    <select id="city" name="city">
+                        <option value="">Select City</option>
+                    </select>
+                    <span id="city-error" class="error-message"></span>
+                </div>
+            
+            </div>
+            <!-- Account Information Section -->
+            <div class="account-section">
+                <h3>Account Information</h3>
+                <div class="first-form-group">
+                    <label for="username" >Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Username">
+                    <span id="username-error" class="error-message"></span>
+                </div>
+                <div class="first-form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Password">
+                    <span id="password-error" class="error-message"></span>
+                </div>
+                <div class="first-form-group">
+                    <label for="confirm-password" >Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm Password">
+                    <span id="confirm-password-error" class="error-message"></span>
+                </div>
+            </div>
+            <!-- Buttons -->
+            <div class="form-buttons">
+                <button type="button" id="back-button">Back</button>
+                <button type="submit" id="signup-button">Sign Up</button>
+            </div>
+            <!-- Footer -->
+            <p class="footer-text">Already have an account? <a href="#" id="login-link">Log in</a></p>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> <!-- jQuery UI CDN -->
+    <script src="register.js"></script> <!-- Link to your JS file -->
+</body>
+</html>
